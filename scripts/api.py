@@ -20,11 +20,11 @@ def sd_gradio_cleaner_api(_: gr.Blocks, app: FastAPI):
         except Exception as e:
             return JSONResponse(
                 content=str(e),
-                status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             )
         return JSONResponse(
             content="Ok",
-            status=status.HTTP_200_OK,
+            status_code=status.HTTP_200_OK,
         )
 
 try:
