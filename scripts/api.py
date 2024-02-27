@@ -1,4 +1,3 @@
-import os
 import shutil
 
 import gradio as gr
@@ -9,7 +8,7 @@ from modules.api.models import *
 from modules.api import api
 
 
-GRADIO_CACHE_DIR = os.getenv('GRADIO_CLEANER_DIR', '/temp/gradio')
+GRADIO_CACHE_DIR = '/tmp/gradio'
 
 
 def sd_gradio_cleaner_api(_: gr.Blocks, app: FastAPI):
